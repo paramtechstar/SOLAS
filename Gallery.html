@@ -1,0 +1,515 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="C:\Users\NIHAL\Desktop\HTML\Dhindora\maxresdefault.jpg">
+<body style="background-color:rgb(31, 31, 31);">
+      
+<style>
+    div.scrollmenu {
+      background-color: rgb(0, 0, 0);
+      overflow: auto;
+      white-space: nowrap; 
+      margin-left: -1%;
+      margin-right: 0%;
+      height:max-content;
+    }
+    
+    div.scrollmenu a {
+      display: inline-block;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 14px;
+      text-decoration: rgb(255, 255, 255);
+    }
+    
+    div.scrollmenu a:hover {
+      background-color: rgb(82, 82, 82);
+    }
+    .box {
+       display: flex;
+       align-items:center;
+    }
+    #example1 {
+      padding: 35px;
+      height:15%;
+    }
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 11%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 10%;
+      color: #818181;
+      display: block;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+    
+    
+    body{
+      margin-right:10;
+    }
+    #Gopara{
+      color:rgb(182, 180, 180);
+    }
+    div.p1{
+      color:rgb(87, 87, 87);
+    }
+    h3{
+      color:rgb(182, 180, 180);
+    }
+    div.jompara{
+      margin-bottom: -75;
+      margin-top: -20;
+      margin-left: 80%;
+    }
+    div.lompara{
+      
+      margin-left: 205;
+    }
+    #kompara{
+      margin-top:-40;
+    }
+    body{
+    margin-left:168;
+}
+:root {
+            --card_width: 250px;
+            --row_increment: 10px;
+            --card_border_radius: 16px;
+            --card_small: 30;
+            --card_medium: 32;
+            --card_large: 45;
+            --card_rectangle: 18;
+        }
+
+        .pin_container {
+            margin: 0;
+            padding: 0;
+            width: 80vw;
+            position: absolute;
+            left: 55%;
+            transform: translateX(-50%);
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, var(--card_width));
+            grid-auto-rows: var(--row_increment);
+            justify-content: center;
+        }
+
+        .card {
+            padding: 0;
+            margin: 15px 10px;
+            border-radius: var(--card_border_radius);
+            background-color: red;
+        }
+
+        .card_small {
+            grid-row-end: span var(--card_small);
+        }
+
+        .card_medium {
+            grid-row-end: span var(--card_medium);
+        }
+
+        .card_large {
+            grid-row-end: span var(--card_large);
+        }
+        .card_rectangle {
+            grid-row-end: span var(--card_rectangle);
+        }
+        body {
+  margin: 0;
+  padding: 0; }
+
+#header {
+  padding: 0;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 85vh; }
+  #header .container {
+    width: 90%;
+    margin: 0 auto;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; }
+  #header .top-header {
+    display: flex;
+    justify-content: space-between; }
+    #header .top-header .logo {
+      margin: 0; }
+    #header .top-header .main-nav {
+      align-self: center; }
+    #header .top-header .main-nav ul {
+      display: flex;
+      list-style: none;
+      text-transform: uppercase; }
+      #header .top-header .main-nav ul li:nth-child(1) {
+        margin-right: 22px; }
+      #header .top-header .main-nav ul li a {
+        color: #fff;
+        text-decoration: none; }
+  #header .branding {
+    text-align: center; }
+    #header .branding h1 {
+      font-size: 25px;
+      font-family: "Times New Roman";
+      color: rgba(255, 255, 255, 0.702);
+      font-weight: bold;
+      font-style: italic; }
+      #header .branding h1 span {
+        font-style: normal;
+        display: block;
+        margin: 30px 0;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-family: "Lato";
+        color: #fff;
+        font-weight: bold; }
+    #header .branding .btn-cta {
+      padding: 8px 36px;
+      text-transform: uppercase;
+      border: 3px solid #fff;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: "Lato";
+      color: #fff;
+      background-color: rgba(246, 150, 121, 0);
+      font-weight: bold;
+      text-align: center; }
+    #header .branding p {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: "Lato";
+      color: #fff;
+      margin: 33px 0 0 0; }
+      #header .branding p a {
+        color: #fff;
+        font-weight: bold; }
+
+@media screen and (min-width: 768px) {
+  #header {
+    height: 100vh; }
+    #header .container {
+      height: 81%;
+      width: 81%;
+      margin: 0 auto; }
+    #header .branding h1 span {
+      font-size: 75px; }
+    #header .branding .btn-cta {
+      padding: 18px 60px; } }
+@media screen and (min-width: 1024px) {
+  #header .container {
+    width: 87%;
+    margin: 0 auto; } }
+#footer {
+  font-family: "lato";
+  font-size: 18px;
+  text-align: center; }
+  #footer .container {
+    width: 100%; }
+
+@media screen and (min-width: 768px) {
+  #footer .container {
+    width: 81%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; } }
+#features {
+  margin: 50px 0 70px 0; }
+  #features .container {
+    width: 90%;
+    margin: 0 auto; }
+  #features .feature {
+    text-align: center; }
+    #features .feature .fig-image {
+      margin: 0; }
+    #features .feature h2 {
+      display: inline-block;
+      margin: 5px 0 0 0;
+      padding-bottom: 7px;
+      font-size: 18px;
+      font-family: "Lato";
+      color: black;
+      font-weight: bold;
+      border-bottom: 1px solid #ff3333; }
+    #features .feature p {
+      font-family: "Lato";
+      color: black; }
+
+@media screen and (min-width: 768px) {
+  #features .container {
+    display: flex;
+    width: 81%;
+    margin: 0 auto; } }
+#mobile-app {
+  font-family: "Lato";
+  padding: 30px 0 0 20px;
+  background-color: #f7f7f7; }
+  #mobile-app .content h2 {
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold; }
+    #mobile-app .content h2 span {
+      border-bottom: 1px solid #ff3333;
+      padding-bottom: 8px; }
+  #mobile-app .iphone {
+    display: none; }
+
+@media screen and (min-width: 768px) {
+  #mobile-app {
+    padding: 30px 0 0 0; }
+    #mobile-app .container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around; }
+    #mobile-app .content {
+      flex-basis: calc(55% - 3em); }
+    #mobile-app .iphone {
+      flex-basis: calc(45% - 3em);
+      margin: 0;
+      order: -1;
+      display: block; }
+    #mobile-app .iphone img {
+      width: 100%;
+      height: 100%; } }
+#reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/reviews-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 315px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Lato";
+  color: white; }
+  #reviews .quote {
+    margin: 0; }
+    #reviews .quote footer {
+      margin-top: 18px;
+      font-size: 14px; }
+
+#cuisines {
+  font-family: "lato"; }
+  #cuisines h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    padding-top: 40px; }
+    #cuisines h2 span {
+      padding-bottom: 5px;
+      border-bottom: 1px solid red; }
+  #cuisines .container {
+    margin-top: 50px; }
+    #cuisines .container .cuisine {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      height: 230px; }
+      #cuisines .container .cuisine h3 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: bold; }
+      #cuisines .container .cuisine p {
+        font-family: "Times New Roman";
+        color: rgba(255, 255, 255, 0.902);
+        font-weight: bold;
+        font-style: italic;
+        margin: 0; }
+    #cuisines .container .american {
+      background-image: url("../images/american.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .chinese {
+      background-image: url("../images/chinese.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .french {
+      background-image: url("../images/french.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .indian {
+      background-image: url("../images/indian.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .italian {
+      background-image: url("../images/italian.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .mexican {
+      background-image: url("../images/mexican.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .pizza {
+      background-image: url("../images/pizza.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .seafood {
+      background-image: url("../images/seafood.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .steak {
+      background-image: url("../images/steak.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    #cuisines .container .sushi {
+      background-image: url("../images/sushi.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+
+@media screen and (min-width: 768px) {
+  #cuisines .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    #cuisines .container .cuisine {
+      width: 20%; } }
+#statistics {
+  font-family: "lato";
+  background-color: #4a3949;
+  padding: 25px 0; }
+  #statistics .stat-data {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0; }
+    #statistics .stat-data h3 {
+      margin: 0;
+      font-size: 36px; }
+      #statistics .stat-data h3 span {
+        font-size: 14px;
+        display: block; }
+
+@media screen and (min-width: 768px) {
+  #statistics {
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around; }
+    #statistics .stat-data {
+      color: #000; }
+      #statistics .stat-data h3 {
+        font-size: 34px; }
+        #statistics .stat-data h3 span {
+          font-size: 13px; } }
+
+</style>
+</head>
+
+
+<body background="rgb 45,56,78">
+  
+ 
+      
+
+      <div id="example1"  style="background: url(letter-retro-pen-line-wallpaper-fc6a9310d283d048d10f5b7a11813b77.jpg);margin-left:auto;margin-right:auto;"  >   
+      </div>
+      <header id="header">
+        <div class="container">
+          <section class="branding">
+            <h1>SOLAS <span>GALLERY</span></h1>
+            <button class="btn-cta">Scroll Down</button>
+            <p>or send us your own photos to get featured below <a href="#">rewarded!</a></p>
+          </section> <!-- branding -->
+        </div><!--  container -->
+      </header> <!-- header -->
+<hr>
+<div id="#bak">    
+<div class="pin_container">
+        <div id="#dokara">
+      <div class="pin_container">
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "1.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "2.png" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "3.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "4.jpeg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "1.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "2.png" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "3.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "4.jpeg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "1.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "2.png" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "3.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "4.jpeg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "1.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "2.png" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "3.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "4.jpeg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "1.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "2.png" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_medium"><a href = "AIML_BLOG.html"> <img src = "3.jpg" width=100% style="border-radius: var(--card_border_radius);"></div>
+        <div class="card card_rectangle"><a href = "AIML_BLOG.html"> <img src = "4.jpeg" width=100% style="border-radius: var(--card_border_radius);"></div>
+                                                 
+        
+    </div>
+      </div>
+      </div>
+</div>
+        
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDJ6eGKXURTOeRPcJhvBw5o6Ed5YHlY1Qc",
+    authDomain: "soalsmuj.firebaseapp.com",
+    projectId: "soalsmuj",
+    storageBucket: "soalsmuj.firebasestorage.app",
+    messagingSenderId: "53844829772",
+    appId: "1:53844829772:web:32c0a6074d8a50000936e9",
+    measurementId: "G-5JRGP414PS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
