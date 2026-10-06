@@ -1,3 +1,57 @@
+/*==================== SCROLL SCALE ====================*/
+
+const cursorGlow = document.querySelector('.cursor-glow');
+
+document.querySelectorAll('*').forEach(el => {
+  if (el.offsetWidth > document.documentElement.clientWidth) {
+    console.log('Overflowing element:', el);
+  }
+});
+
+document.addEventListener('mousemove', (e) => {
+  // Directly updates the position of the glow dot based on coordinates
+  cursorGlow.style.left = e.clientX + 'px';
+  cursorGlow.style.top = e.clientY + 'px';
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const dots = document.querySelectorAll('.scale-dot');
+  const marker = document.getElementById('activeMarker');
+  
+  // Position marker over the first dot initially
+  function updateMarker(targetDot) {
+    const dotRect = targetDot.getBoundingClientRect();
+    const containerRect = targetDot.parentElement.getBoundingClientRect();
+    
+    // Align diamond center with dot center
+    const topPosition = (dotRect.top - containerRect.top) + (dotRect.height / 2) - (marker.offsetHeight / 2);
+    marker.style.top = `${topPosition}px`;
+  }
+
+  if (dots.length > 0) {
+    updateMarker(dots[0]);
+  }
+
+  // Scroll listener to update active dot based on section in view
+  const sections = document.querySelectorAll('section'); // Ensure your page sections use <section> or update selector
+  
+  window.addEventListener('scroll', () => {
+    let currentSectionIndex = 0;
+    
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop - 200;
+      if (window.scrollY >= sectionTop) {
+        currentSectionIndex = index;
+      }
+    });
+
+    if (dots[currentSectionIndex]) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSectionIndex].classList.add('active');
+      updateMarker(dots[currentSectionIndex]);
+    }
+  });
+});
+
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
