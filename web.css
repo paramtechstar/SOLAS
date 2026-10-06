@@ -1,13 +1,246 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* STATS COUNTER SECTION*/
+
+
+  .garuda-stats-section {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    background: linear-gradient(180deg, rgba(9, 99, 97, 0.8) 0%, rgba(9, 93, 99, 0.8) 100%);
+    padding: 40px 15px;
+    border-top: 1px solid rgba(55, 212, 201, 0.3);
+    border-bottom: 1px solid rgba(55, 201, 212, 0.3);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .garuda-stats-section * {
+    box-sizing: border-box;
+  }
+
+  /* Top & Bottom Ticker Bars */
+  .garuda-stats-section .ticker-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #ff9500;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+  }
+
+  .garuda-stats-section .ticker-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .garuda-stats-section .ticker-bar span.trophy {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+  }
+
+  /* Main Grid - Fully Responsive */
+  .garuda-stats-section .stats-grid {
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+    align-items: start;
+  }
+
+  .garuda-stats-section .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+  }
+
+  .garuda-stats-section .diamond { 
+    width: 6px;
+    height: 6px;
+    background-color: #ffb300;
+    transform: rotate(45deg);
+    margin-bottom: 20px;
+  }
+
+  .garuda-stats-section .stat-number {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .garuda-stats-section .stat-label {
+    font-size: clamp(10px, 2vw, 11px);
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    max-width: 200px;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Tablet Devices (<= 1024px) */
+  @media (max-width: 1024px) {
+    .garuda-stats-section .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 20px;
+      margin: 25px auto;
+    }
+
+    .garuda-stats-section {
+      padding: 30px 15px;
+    }
+  }
+
+  /* Mobile Devices (<= 576px) */
+  @media (max-width: 576px) {
+    .garuda-stats-section .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      margin: 20px auto;
+    }
+
+    .garuda-stats-section .ticker-bar {
+      justify-content: flex-start;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding-bottom: 5px;
+    }
+
+    .garuda-stats-section .diamond {
+      margin-bottom: 12px;
+    }
+  }
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
+/* Hide the default browser cursor if you only want the glow */
+body {
+  cursor: none;
+ 
+}
+x
+/*NEXUS ANIMATION*/
 
+.nexus-loader {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: #00ffcc;
+  border-radius: 50%;
+  animation: nexusPulse 1.2s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.36s; }
+.dot:nth-child(2) { animation-delay: -0.24s; }
+.dot:nth-child(3) { animation-delay: -0.12s; }
+.dot:nth-child(4) { animation-delay: 0s; }
+
+@keyframes nexusPulse {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(1.0);
+    opacity: 1;
+    box-shadow: 0 0 12px #00ffcc;
+  }
+}
+
+/* Style the glowing dot */
+.cursor-glow {
+  width: 12px;
+  height: 12px;
+  background-color: #00f7ff; 
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.05s ease-out; 
+
+  /* EXPANDED GLOW RADIUS */
+  box-shadow: 
+    0 0 15px #00f7ff,  /* Small, intense inner glow */
+    0 0 30px #00f7ff,  /* Medium glow */
+    0 0 60px #00f7ff,  /* Large glow */
+    0 0 120px #00f7ff; /* Massive outer atmospheric glow */
+  /* Smooth trailing transition */
+  transition: transform 0.5s ease-out; 
+}
+/* Container fixed to the left */
+.scroll-scale {
+  position: fixed;
+  left: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  z-index: 1000;
+}
+
+/* Thin vertical background line */
+.scroll-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+/* Regular section dots */
+.scale-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* Moving Active Marker (Gold Diamond) */
+.active-marker {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: x; /* Gold color */
+  transform: rotate(45deg); /* Turns square into diamond */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  transition: top 0.3s ease-in-out;
+  pointer-events: none;
+}
   /*========== Colors ==========*/
   --first-color: #06819c;
-  --first-color-alt: #043186;
+  --first-color-alt: #ba2f08;
   --title-color: #393939;
   --text-color: #707070;
   --text-color-light: #A6A6A6;
@@ -283,6 +516,10 @@ img{
 
 .button:hover{
   background-color: var(--first-color-alt);
+  box-shadow: 0 0 5px #fe5d0046, 
+              0 0 20px #fe5d0046, 
+              0 0 40px #fe5d0046, 
+              0 0 60px #fe5d0046;
 }
 
 /*========== ABOUT ==========*/
