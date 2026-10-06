@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+<!-- Load Required Fonts (Place in <head> or directly here) -->
+
+    </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,10 +14,29 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="web.css">
 
-        <title>SOLAS freshers eyes here</title>
+        <title>SOLAS MUJ</title>
+        <link rel="icon" type="image/x-icon" href="Untitled_Design__1_-removebg-preview.png">
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--NEXUS ANIMATION-->
+        <div class="nexus-loader">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
 
+        <!--scroll scale-->
+        <div class="scroll-scale">
+        <div class="scroll-line"></div>
+        <div class="active-marker" id="activeMarker"></div>
+  
+        <a href="#section1" class="scale-dot active" data-index="0"></a>
+        <a href="#section2" class="scale-dot" data-index="1"></a>
+        <a href="#section3" class="scale-dot" data-index="2"></a>
+        <a href="#section4" class="scale-dot" data-index="3"></a>
+        </div>
         <!--========== SCROLL TOP ==========-->
         <a href="#" class="scrolltop" id="scroll-top">
             <i class='bx bx-chevron-up scrolltop__icon'></i>
@@ -34,7 +57,7 @@
                         <li class="nav__item"><a href="#menu" class="nav__link">Events</a></li>
                         <li class="nav__item">Current Event</li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
-                        <li class="nav__item" style="background-color:rgb(255, 7, 7);""><b><a href="#contact" class="nav__link">LIVE EVENTS!</b></a></li>
+                        <li class="nav__item" style="background-color:rgb(255, 7, 7);""><b><a href="Current event.html" class="nav__link">LIVE EVENTS!</b></a></li>
 
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
@@ -46,6 +69,7 @@
                 </div>
             </nav>
         </header>
+<div class="cursor-glow"></div>
 
         <main class="l-main">
             <!--========== HOME ==========-->
@@ -58,9 +82,65 @@
                     </div>
     
                     <img src="Untitled_Design__1_-removebg-preview.png" alt="SOLAS" class="home__img">
+                    
                 </div>
             </section>
             
+            <div class="marquee-content">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+<section class="garuda-stats-section">
+  
+  <!-- Top Decorative Line -->
+  <div class="ticker-bar">
+    <span>CLASSIQUE</span> ◆ 
+    <span class="trophy">🏆 FRESHER'S CLUB</span> ◆ 
+    <span>SOLAS</span> ◆ 
+    <span>MUJ</span> ◆ 
+    <span>FRESHERS</span> ◆ 
+    <span>FOUNDING YEAR 2026</span>
+  </div>
+
+  <!-- Main Statistics Grid -->
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="diamond"></div>
+      <div class="stat-number">1000+</div>
+      <div class="stat-label">Total Footfall</div>
+    </div>
+
+    <div class="stat-item">
+      <div class="diamond"></div>
+      <div class="stat-number">2+</div>
+      <div class="stat-label">Events Hosted</div>
+    </div>
+
+    <div class="stat-item">
+      <div class="diamond"></div>
+      <div class="stat-number">1st</div>
+      <div class="stat-label">FRESHER FOCUSED CLUB</div>
+    </div>
+
+    <div class="stat-item">
+      <div class="diamond"></div>
+      <div class="stat-number">20000+</div>
+      <div class="stat-label">Total Digital Impressions </div>
+    </div>
+  </div>
+
+  <!-- Bottom Decorative Line -->
+ <div class="ticker-bar">
+    <span>CLASSIQUE</span> ◆ 
+    <span class="trophy">🏆 FRESHER'S CLUB</span> ◆ 
+    <span>SOLAS</span> ◆ 
+    <span>MUJ</span> ◆ 
+    <span>FRESHERS</span> ◆ 
+    <span>FOUNDING YEAR 2026</span>
+  </div>
+
+
+</section>
+<!-- END STATS COUNTER SECTION -->
             <!--========== ABOUT ==========-->
             <section class="about section bd-container" id="about">
                 <div class="about__container  bd-grid">
@@ -215,15 +295,15 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Adress</h3>
                     <ul>
-                        <li>Nihal Thakur</li>
-                        <li></li>
-                        <li></li>
-                        <li>nihal.thakur.india@gmail.com</li>
+                        <li>SOLAS</li>
+                        <li>PARMEET SINGH PRESIDENT</li>
+                        <li>+91 817 504 832 0</li>
+                        <li>Solasit.muj@gmail.com</li>
                     </ul>
                 </div> 
             </div>
 
-            <p class="footer__copy">&#169; SOLAS 2026. All right reserved</p>
+            <p class="footer__copy">&#169; SOLAS 2026. All right reserved. Developed by Nihal Thakur. </p>
         </footer>
 
         <!--========== SCROLL REVEAL ==========-->
